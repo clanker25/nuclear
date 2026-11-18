@@ -1,0 +1,714 @@
+{
+  "common": {
+    "app": {
+      "name": "Nuclear",
+      "description": "Application de streaming de musique pour votre ordinateur"
+    },
+    "actions": {
+      "save": "Enregistrer",
+      "cancel": "Annuler",
+      "delete": "Supprimer",
+      "edit": "Modifier",
+      "close": "Fermer",
+      "back": "Retour",
+      "next": "Suivant",
+      "confirm": "Confirmer",
+      "apply": "Appliquer",
+      "reset": "Réinitialiser",
+      "clear": "Effacer",
+      "search": "Rechercher",
+      "loading": "Chargement...",
+      "retry": "Réessayer",
+      "moreActions": "Plus d'actions"
+    },
+    "errors": {
+      "network": "Erreur réseau. Veuillez vérifier votre connexion.",
+      "notFound": "Introuvable"
+    }
+  },
+  "navigation": {
+    "explore": "Explorer",
+    "dashboard": "Tableau de bord",
+    "collection": "Collection",
+    "favoriteAlbums": "Albums favoris",
+    "favoriteTracks": "Morceaux favoris",
+    "favoriteArtists": "Artistes favoris",
+    "playlists": "Playlists",
+    "history": "Historique",
+    "lyrics": "Paroles",
+    "sources": "Sources"
+  },
+  "history": {
+    "title": "Historique",
+    "empty": "Aucune lecture pour le moment",
+    "emptyDescription": "Les morceaux que vous écoutez apparaîtront ici",
+    "today": "Aujourd'hui",
+    "yesterday": "Hier",
+    "tabs": {
+      "stats": "Statistiques",
+      "listeningHistory": "Historique d'écoute"
+    },
+    "row": {
+      "favorite": "Ajouter aux favoris",
+      "unfavorite": "Retirer des favoris",
+      "addToQueue": "Ajouter à la file d'attente"
+    },
+    "stats": {
+      "busiestHour": "Heure la plus active",
+      "listeningTime": "Temps d'écoute",
+      "hourOfDay": "Heure de la journée",
+      "dayOfWeek": "Jour de la semaine",
+      "calendar": "Calendrier d'écoute",
+      "topArtists": "Meilleurs artistes",
+      "topAlbums": "Meilleurs albums",
+      "topTracks": "Meilleurs morceaux",
+      "empty": "Aucune donnée d'écoute pour le moment",
+      "emptyDescription": "Les morceaux que vous écoutez apparaîtront dans vos statistiques",
+      "legendLess": "Moins",
+      "legendMore": "Plus",
+      "range": {
+        "last7Days": "7 derniers jours",
+        "last30Days": "30 derniers jours",
+        "last90Days": "90 derniers jours",
+        "last12Months": "12 derniers mois",
+        "allTime": "Depuis toujours"
+      }
+    }
+  },
+  "sources": {
+    "title": "Sources",
+    "streaming": "Streaming",
+    "streamingDescription": "Les sources de streaming fournissent le son. Quand vous lancez un morceau, la source de streaming trouve le flux audio et le transmet.",
+    "metadata": "Métadonnées",
+    "metadataDescription": "Les sources de métadonnées fournissent des informations sur les artistes, les albums et les morceaux. Les résultats de recherche, les pages d'artistes et les détails des albums proviennent de la source de métadonnées active.",
+    "dashboard": "Tableau de bord",
+    "dashboardDescription": "Les sources du tableau de bord fournissent du contenu personnalisé, comme les meilleurs morceaux, les nouveautés et les recommandations sur l'écran d'accueil.",
+    "playlists": "Playlists",
+    "playlistsDescription": "Les sources de playlists vous permettent d'importer des playlists depuis des services externes à partir d'une URL.",
+    "discovery": "Découverte",
+    "discoveryDescription": "Les sources de découverte recommandent de nouveaux morceaux en fonction de ce que vous écoutez. Activez la découverte musicale avec l'icône radiocassette dans la barre du bas.",
+    "lyrics": "Paroles",
+    "lyricsDescription": "Les sources de paroles fournissent les paroles du morceau en cours. Nuclear interroge toutes les sources de paroles en même temps et affiche le meilleur résultat. Vous pouvez choisir les paroles d'une autre source dans la vue Paroles.",
+    "lockedReason": "La source de métadonnées <metadata>{{metadataName}}</metadata> nécessite la source de streaming <streaming>{{streamingName}}</streaming>.",
+    "missingStreamingProvider": "Le fournisseur de streaming requis \"{{providerId}}\" n'est pas disponible",
+    "noProviders": "Aucun fournisseur installé"
+  },
+  "discovery": {
+    "recommendationError": "Échec de la récupération des recommandations"
+  },
+  "favorites": {
+    "albums": {
+      "title": "Albums favoris",
+      "empty": "Aucun album favori pour le moment",
+      "emptyDescription": "Les albums que vous ajoutez aux favoris apparaîtront ici"
+    },
+    "tracks": {
+      "title": "Morceaux favoris",
+      "empty": "Aucun morceau favori pour le moment",
+      "emptyDescription": "Les morceaux que vous ajoutez aux favoris apparaîtront ici"
+    },
+    "artists": {
+      "title": "Artistes favoris",
+      "empty": "Aucun artiste favori pour le moment",
+      "emptyDescription": "Les artistes que vous ajoutez aux favoris apparaîtront ici"
+    }
+  },
+  "playlists": {
+    "title": "Playlists",
+    "empty": "Aucune playlist pour le moment",
+    "emptyDescription": "Créez une playlist ou importez-en une pour commencer",
+    "emptyTracks": "Aucun morceau dans cette playlist",
+    "emptyTracksDescription": "Ajoutez des morceaux depuis les résultats de recherche ou votre bibliothèque",
+    "create": "Créer",
+    "importJson": "Importer depuis JSON",
+    "exportJson": "Exporter en JSON",
+    "add": "Ajouter",
+    "delete": "Supprimer la playlist",
+    "deleteConfirm": "Voulez-vous vraiment supprimer cette playlist ?",
+    "play": "Lire",
+    "addToQueue": "Ajouter à la file d'attente",
+    "saveLocally": "Enregistrer localement",
+    "readOnlyBadge": "{{source}}",
+    "readOnlyTooltip": "Cette playlist provient de {{source}} et est en lecture seule. Enregistrez une copie locale pour la modifier.",
+    "trackCount_one": "{{count}} morceau",
+    "trackCount_many": "{{count}} de morceaux",
+    "trackCount_other": "{{count}} morceaux",
+    "addToPlaylist": "Ajouter à la playlist",
+    "filterPlaylists": "Filtrer les playlists...",
+    "sortBy": {
+      "custom": "Personnalisé",
+      "name": "Nom",
+      "dateAdded": "Date d'ajout",
+      "dateModified": "Date de modification",
+      "trackCount": "Morceaux",
+      "duration": "Durée"
+    },
+    "filterNoResults": "Aucune playlist ne correspond à votre filtre",
+    "filterNoResultsDescription": "Modifiez ou supprimez la recherche",
+    "createNew": "Créer une playlist",
+    "saveQueueAsPlaylist": "Enregistrer la file d'attente comme playlist",
+    "name": "Nom",
+    "namePlaceholder": "Nom de la playlist...",
+    "exportSuccess": "Playlist exportée",
+    "exportError": "Échec de l'exportation de la playlist",
+    "importSuccess": "Playlist importée",
+    "importBatchSuccess_one": "{{count}} playlist importée",
+    "importBatchSuccess_many": "{{count}} de playlists importées",
+    "importBatchSuccess_other": "{{count}} playlists importées",
+    "importError": "Échec de l'importation de la playlist",
+    "importNoPlaylists": "Aucune playlist trouvée dans ce fichier",
+    "importUrl": "Importer depuis une URL",
+    "importUrlTitle": "Importer une playlist depuis une URL",
+    "importUrlPlaceholder": "Collez l'URL d'une playlist...",
+    "importUrlNoProvider": "Aucun plugin ne peut traiter cette URL. Installez un plugin qui prend en charge ce service.",
+    "importUrlImporting": "Importation...",
+    "descriptionPlaceholder": "Ajouter une description...",
+    "folders": {
+      "create": "Nouveau dossier",
+      "createTitle": "Créer un dossier",
+      "namePlaceholder": "Nom du dossier...",
+      "rename": "Renommer le dossier",
+      "delete": "Supprimer le dossier",
+      "deleteConfirm": "Les playlists de ce dossier en seront retirées. Elles ne seront pas supprimées.",
+      "playlistCount_one": "{{count}} playlist",
+      "playlistCount_many": "{{count}} de playlists",
+      "playlistCount_other": "{{count}} playlists",
+      "moveTo": "Déplacer vers le dossier",
+      "removeFrom": "Retirer du dossier",
+      "empty": "Ce dossier est vide",
+      "emptyDescription": "Déplacez des playlists ici depuis leur menu, ou créez-en une nouvelle"
+    }
+  },
+  "search": {
+    "title": "Rechercher",
+    "query": "Requête",
+    "placeholder": "Rechercher",
+    "noResults": "Aucun résultat trouvé",
+    "searching": "Recherche en cours...",
+    "failedToLoad": "Échec du chargement des résultats.",
+    "clearRecentSearches": "Effacer les recherches récentes",
+    "recentSearches": "Recherches récentes",
+    "results": {
+      "tracks": "Morceaux",
+      "albums": "Albums",
+      "artists": "Artistes",
+      "playlists": "Playlists"
+    },
+    "filters": {
+      "all": "Tout",
+      "tracks": "Morceaux",
+      "albums": "Albums",
+      "artists": "Artistes",
+      "playlists": "Playlists"
+    },
+    "empty-state": "Aucun plugin de métadonnées installé",
+    "empty-state-description": "Installez un plugin de métadonnées pour rechercher de la musique.",
+    "empty-state-action": "Parcourir les plugins"
+  },
+  "artist": {
+    "title": "Artiste",
+    "albums": "Albums",
+    "tracks": "Morceaux",
+    "similar": "Artistes similaires",
+    "popularTracks": "Morceaux populaires",
+    "biography": "Biographie",
+    "discography": "Discographie",
+    "topTracks": "Meilleurs morceaux",
+    "onTour": "En tournée",
+    "notOnTour": "Pas en tournée",
+    "followers": "Abonnés",
+    "followings": "Abonnements",
+    "playlists": "Playlists",
+    "errors": {
+      "failedToLoadDetails": "Échec du chargement des détails de l'artiste.",
+      "failedToLoadAlbums": "Échec du chargement des albums.",
+      "failedToLoadPopularTracks": "Échec du chargement des morceaux populaires.",
+      "failedToLoadSimilarArtists": "Échec du chargement des artistes similaires.",
+      "failedToLoadSocialStats": "Échec du chargement des statistiques de l'artiste.",
+      "failedToLoadPlaylists": "Échec du chargement des playlists."
+    }
+  },
+  "album": {
+    "title": "Album",
+    "genre": "Genre",
+    "year": "Année",
+    "tracks": "Morceaux",
+    "errors": {
+      "failedToLoadDetails": "Échec du chargement des détails de l'album.",
+      "failedToLoadTracks": "Échec du chargement des morceaux."
+    }
+  },
+  "themes": {
+    "title": "Thèmes",
+    "basic": "Thèmes basiques",
+    "advanced": "Thèmes avancés",
+    "marketplace": "Thèmes du store",
+    "default": "Par défaut",
+    "selectPlaceholder": "Sélectionnez un thème",
+    "description": "Thèmes trouvés dans le répertoire de données de l'application",
+    "tabs": {
+      "myThemes": "Mes thèmes",
+      "store": "Store"
+    },
+    "store": {
+      "searchPlaceholder": "Rechercher des thèmes...",
+      "install": "Installer",
+      "installing": "Installation...",
+      "installed": "Installé",
+      "by": "par",
+      "installError": "Échec de l'installation de {{name}}",
+      "loadError": "Échec du chargement du store de thèmes.",
+      "apply": "Appliquer",
+      "active": "Actif",
+      "uninstall": "Désinstaller",
+      "uninstallError": "Échec de la désinstallation de {{name}}"
+    }
+  },
+  "dashboard": {
+    "title": "Tableau de bord",
+    "empty-state": "Bienvenue sur Nuclear",
+    "empty-state-description": "Installez un plugin pour voir ici les meilleurs morceaux, les nouveautés et les recommandations.",
+    "empty-state-action": "Parcourir les plugins",
+    "top-tracks": "Meilleurs morceaux",
+    "top-artists": "Meilleurs artistes",
+    "top-albums": "Meilleurs albums",
+    "editorial-playlists": "Meilleures playlists",
+    "new-releases": "Nouveautés",
+    "filter-artists": "Filtrer les artistes...",
+    "filter-albums": "Filtrer les albums...",
+    "filter-playlists": "Filtrer les playlists...",
+    "filter-releases": "Filtrer les nouveautés...",
+    "nothing-found": "Aucun résultat"
+  },
+  "plugins": {
+    "title": "Plugins",
+    "addPlugin": "Ajouter un plugin",
+    "tabs": {
+      "installed": "Installés",
+      "store": "Store"
+    },
+    "installed": {
+      "empty-state": "Aucun plugin installé",
+      "empty-state-description": "Parcourez le store de plugins pour trouver les plugins de streaming, de métadonnées et autres.",
+      "empty-state-action": "Aller au store",
+      "update-available": "Mise à jour disponible",
+      "by": "par"
+    },
+    "store": {
+      "searchPlaceholder": "Rechercher des plugins...",
+      "install": "Installer",
+      "installing": "Installation...",
+      "installed": "Installé",
+      "by": "par",
+      "categories": {
+        "all": "Tout",
+        "streaming": "Streaming",
+        "metadata": "Métadonnées",
+        "lyrics": "Paroles",
+        "scrobbling": "Scrobbling",
+        "dashboard": "Tableau de bord",
+        "playlists": "Playlists",
+        "discovery": "Découverte",
+        "other": "Autre"
+      },
+      "error": {
+        "title": "Échec du chargement des plugins",
+        "description": "Impossible de récupérer le registre des plugins. Veuillez vérifier votre connexion Internet.",
+        "retry": "Réessayer"
+      },
+      "noResults": {
+        "title": "Aucun plugin trouvé",
+        "filtered": "Essayez de modifier votre recherche ou vos filtres.",
+        "empty": "Aucun plugin disponible pour le moment."
+      },
+      "installError": {
+        "title": "Échec de l'installation de {{name}}",
+        "unverifiedRelease": "Le registre des plugins ne contient aucune version vérifiée de ce plugin."
+      }
+    }
+  },
+  "updater": {
+    "updateAvailable": "Mise à jour disponible",
+    "clickToUpdate": "Cliquez pour mettre à jour",
+    "downloading": "Téléchargement... {{progress}}%",
+    "clickToRestart": "Cliquez pour redémarrer"
+  },
+  "flatpak": {
+    "sandboxWarning": "Vous utilisez Nuclear dans un bac à sable Flatpak. Certaines fonctionnalités peuvent ne pas fonctionner correctement. En cas de problème, essayez plutôt le paquet .deb ou l'AppImage.",
+    "dismiss": "Compris"
+  },
+  "preferences": {
+    "title": "Préférences",
+    "navigation": {
+      "general": "Paramètres",
+      "app": "Application"
+    },
+    "general": {
+      "title": "Général",
+      "language": {
+        "title": "Langue",
+        "description": "Sélectionnez votre langue préférée"
+      }
+    },
+    "plugins": {
+      "title": "Plugins",
+      "auto-update": {
+        "title": "Mise à jour automatique des plugins",
+        "description": "Télécharger et installer automatiquement les nouvelles versions des plugins du store au démarrage"
+      }
+    },
+    "themes": {
+      "title": "Thèmes"
+    },
+    "logs": {
+      "title": "Logs"
+    },
+    "whats-new": {
+      "title": "Nouveautés"
+    },
+    "shortcuts": {
+      "title": "Raccourcis clavier",
+      "sections": {
+        "playback": "Lecture",
+        "general": "Général"
+      },
+      "commands": {
+        "playback.toggle": "Lecture / Pause",
+        "playback.next": "Morceau suivant",
+        "playback.previous": "Morceau précédent",
+        "playback.seekForward": "Avancer",
+        "playback.seekBackward": "Reculer",
+        "playback.volumeUp": "Augmenter le volume",
+        "playback.volumeDown": "Baisser le volume",
+        "playback.mute": "Couper / Rétablir le son",
+        "general.toggleSettings": "Ouvrir les paramètres"
+      },
+      "recording": "Appuyez sur une combinaison de touches...",
+      "resetAll": "Rétablir les valeurs par défaut",
+      "reset": "Réinitialiser",
+      "conflict": "Ce raccourci est déjà utilisé par \"{{command}}\""
+    },
+    "appearance": {
+      "title": "Apparence",
+      "framelessWindow": {
+        "title": "Fenêtre sans cadre",
+        "description": "Masque la barre de titre native. Faites glisser la barre supérieure pour déplacer la fenêtre."
+      },
+      "customTitleBar": {
+        "title": "Barre de titre personnalisée",
+        "description": "Remplace la barre de titre native par une barre au style assorti à l'application."
+      },
+      "titleBarStyle": {
+        "title": "Style de la barre de titre",
+        "description": "Choisissez le style visuel des commandes de la barre de titre personnalisée."
+      }
+    },
+    "lyrics": {
+      "textSize": {
+        "title": "Taille du texte des paroles",
+        "description": "La taille du texte dans la vue des paroles."
+      },
+      "autoScroll": {
+        "title": "Défilement automatique des paroles",
+        "description": "Faire défiler les paroles synchronisées avec le morceau."
+      }
+    },
+    "playback": {
+      "title": "Lecture",
+      "skipSeconds": {
+        "title": "Durée de saut",
+        "description": "Nombre de secondes de saut en avant ou en arrière"
+      },
+      "crossfadeMs": {
+        "title": "Fondu enchaîné",
+        "description": "Durée du fondu enchaîné entre les morceaux, en millisecondes"
+      },
+      "streamExpiryMs": {
+        "title": "Durée de validité du flux",
+        "description": "Délai au bout duquel une URL de flux résolue est considérée comme expirée et doit être résolue à nouveau"
+      },
+      "streamResolutionRetries": {
+        "title": "Nouvelles tentatives de résolution du flux",
+        "description": "Nombre de nouvelles tentatives de résolution d'une URL de flux avant de passer au candidat suivant"
+      },
+      "discoveryVariety": {
+        "title": "Variété des découvertes",
+        "description": "Écart entre les recommandations et votre écoute actuelle. Plus la valeur est basse, plus l'écart est faible.",
+        "startLabel": "Moins surprenant",
+        "endLabel": "Plus surprenant"
+      },
+      "streamVerification": {
+        "title": "Vérification des flux",
+        "description": "Nuclear joue les flux que vous avez vérifiés et affiche la barre de vérification. Lorsque ce réglage est désactivé, Nuclear ignore toutes les vérifications."
+      },
+      "streamVerificationService": {
+        "title": "Vérification en ligne",
+        "description": "Nuclear envoie vos vérifications au service de vérification et récupère les flux vérifiés par d'autres utilisateurs. Ce réglage n'a aucun effet lorsque la vérification des flux est désactivée."
+      }
+    },
+    "history": {
+      "title": "Historique",
+      "enabled": {
+        "title": "Enregistrer l'historique d'écoute",
+        "description": "Conserver un historique local de la musique que vous écoutez."
+      }
+    },
+    "layout": {
+      "title": "Disposition"
+    },
+    "updates": {
+      "title": "Mises à jour",
+      "checkForUpdates": {
+        "title": "Rechercher les mises à jour",
+        "description": "Rechercher automatiquement les nouvelles versions au démarrage"
+      },
+      "autoInstall": {
+        "title": "Installation automatique des mises à jour",
+        "description": "Télécharger et installer automatiquement les mises à jour dès qu'elles sont disponibles"
+      }
+    },
+    "integrations": {
+      "title": "Intégrations",
+      "jam": {
+        "enabled": {
+          "title": "Nuclear Jam",
+          "description": "Démarrez un serveur web local qui vous permet de contrôler Nuclear depuis d'autres appareils de votre réseau."
+        },
+        "remoteUrl": {
+          "title": "URL distante",
+          "description": "Ouvrez cette URL sur un autre appareil pour contrôler Nuclear."
+        },
+        "apiUrl": {
+          "title": "API URL",
+          "description": "URL de base de l'API HTTP pour un accès programmatique."
+        }
+      },
+      "mcp": {
+        "enabled": {
+          "title": "Activer le serveur MCP",
+          "description": "Démarrez un serveur MCP local qui permet aux outils d'IA de contrôler Nuclear."
+        },
+        "serverUrl": {
+          "title": "URL du serveur MCP",
+          "description": "Indiquez cette URL à votre outil d'IA pour vous connecter à Nuclear."
+        }
+      },
+      "mpd": {
+        "enabled": {
+          "title": "Activer le serveur MPD",
+          "description": "Démarrez un serveur local compatible MPD pour que les clients MPD puissent contrôler Nuclear."
+        },
+        "serverUrl": {
+          "title": "URL du serveur MPD",
+          "description": "Indiquez cette adresse à votre client MPD pour vous connecter à Nuclear."
+        }
+      },
+      "discord": {
+        "enabled": {
+          "title": "Discord Rich Presence",
+          "description": "Affichez ce que vous écoutez sur votre profil Discord."
+        }
+      }
+    }
+  },
+  "queue": {
+    "title": "File d'attente",
+    "empty": {
+      "title": "La file d'attente est vide",
+      "subtitle": "Ajoutez des morceaux pour commencer la lecture"
+    },
+    "actions": {
+      "remove": "Retirer de la file d'attente",
+      "clear": "Vider la file d'attente",
+      "saveAsPlaylist": "Enregistrer la file d'attente comme playlist"
+    },
+    "errors": {
+      "playback": "Erreur de lecture"
+    },
+    "candidates": {
+      "empty": "Aucun flux candidat",
+      "failed": "échec"
+    },
+    "streamVerification": {
+      "unverified": "Non vérifié",
+      "weaklyVerified": "Faiblement vérifié",
+      "verified": "Vérifié",
+      "verifiedByUser": "Vérifié par vous",
+      "verify": "Vérifier",
+      "unverify": "Annuler la vérification",
+      "failed": "Échec de la vérification du flux",
+      "notShared": "Le flux a été vérifié localement, mais Nuclear n'a pas pu joindre le service de vérification.",
+      "help": "Fonctionnement de la vérification des flux",
+      "explanation": "Nuclear peut parfois jouer la mauvaise version d'un morceau. Pour corriger cela, faites un clic droit sur l'élément de la file d'attente, choisissez le bon flux, puis cliquez sur Vérifier. Nuclear enregistre votre vérification sur votre ordinateur et joue toujours ce flux pour le morceau.\n\nSi la vérification en ligne est activée, Nuclear partage aussi votre vérification avec les autres utilisateurs, qui obtiennent ce flux en premier. Pour chaque morceau que vous n'avez pas vérifié, Nuclear demande au service de vérification le flux qui a reçu le plus de votes. Il envoie l'artiste, le titre et un identifiant aléatoire.",
+      "learnMore": "En savoir plus"
+    }
+  },
+  "track": {
+    "actions": {
+      "playNow": "Lire maintenant",
+      "playNext": "Lire ensuite",
+      "addToQueue": "Ajouter à la file d'attente",
+      "addToFavorites": "Ajouter aux favoris",
+      "removeFromFavorites": "Retirer des favoris"
+    }
+  },
+  "trackTable": {
+    "headers": {
+      "artist": "Artiste",
+      "title": "Titre",
+      "album": "Album",
+      "duration": "Durée"
+    },
+    "favorite": "Ajouter aux favoris",
+    "unfavorite": "Retirer des favoris",
+    "playAll": "Tout lire",
+    "addAllToQueue": "Tout ajouter à la file d'attente",
+    "addToQueue": "Ajouter à la file d'attente",
+    "trackOptions": "Options du morceau",
+    "remove": "Retirer de la liste",
+    "filterPlaceholder": "Filtrer les morceaux"
+  },
+  "pagination": {
+    "navigation": "Pagination",
+    "previous": "Page précédente",
+    "next": "Page suivante",
+    "page": "Page {{pageNumber}}"
+  },
+  "streaming": {
+    "ytdlp": {
+      "install": {
+        "progress": "Téléchargement de yt-dlp… {{percent}}%",
+        "progressUnknown": "Téléchargement de yt-dlp…",
+        "finished": "yt-dlp téléchargé",
+        "failed": "Impossible de télécharger yt-dlp"
+      },
+      "update": {
+        "progress": "Mise à jour de yt-dlp… {{percent}}%",
+        "progressUnknown": "Mise à jour de yt-dlp…",
+        "finished": "yt-dlp mis à jour",
+        "failed": "Impossible de mettre à jour yt-dlp"
+      }
+    },
+    "errors": {
+      "noCandidatesFound": "Échec de la recherche de flux candidats",
+      "allCandidatesFailed": "Tous les flux candidats ont échoué",
+      "noProviderAvailable": "Aucun fournisseur de streaming n'est disponible. Installez un plugin de streaming pour lire de la musique.",
+      "streamRecoveryFailed": "Le flux n'est plus disponible et n'a pas pu être rétabli",
+      "hifi": {
+        "loadFailed": "Impossible de charger le flux audio : {{details}}",
+        "unsupportedFormat": "Le flux audio n'est pas dans un format pris en charge. Essayez une autre source pour ce morceau.",
+        "mseUnavailable": "Le streaming n'est pas disponible, car ce système ne prend pas en charge les MediaSource Extensions. La mise à jour du moteur web de votre système peut résoudre le problème.",
+        "appendRejected": "Le moteur audio a rejeté les données du flux. Le codec n'est peut-être pas pris en charge. Essayez une autre source pour ce morceau."
+      }
+    }
+  },
+  "playerBar": {
+    "noTrackPlaying": "Aucun morceau en cours de lecture",
+    "shuffleOn": "Lecture aléatoire: activée",
+    "shuffleOff": "Lecture aléatoire: désactivée",
+    "repeatOff": "Répétition: désactivée",
+    "repeatAll": "Répétition: tout",
+    "repeatOne": "Répétition: un morceau",
+    "discoveryOn": "Découverte: activée",
+    "discoveryOff": "Découverte: désactivée"
+  },
+  "lyrics": {
+    "nothingPlaying": "Aucune lecture en cours",
+    "nothingPlayingDescription": "Lancez un morceau pour voir ses paroles ici.",
+    "noPlugins": "Aucun plugin de paroles installé",
+    "noPluginsDescription": "Installez un plugin de paroles pour voir les paroles de votre musique.",
+    "browsePlugins": "Parcourir les plugins de paroles",
+    "noLyrics": "Pas de paroles pour ce morceau",
+    "noLyricsDescription": "Aucun résultat de {{providers, list}}.",
+    "noLyricsFromAnyProvider": "Aucun fournisseur de paroles n'a renvoyé de résultats.",
+    "loadError": "Impossible de charger les paroles",
+    "loadErrorDescription": "Vérifiez la connexion à Nuclear et réessayez.",
+    "providerError": "Un fournisseur de paroles n'a pas réussi à charger les paroles",
+    "instrumental": "Instrumental",
+    "instrumentalDescription": "Ce morceau n'a pas de paroles.",
+    "currentLine": "Ligne en cours",
+    "showEarlier": "Afficher les paroles plus tôt",
+    "showLater": "Afficher les paroles plus tard",
+    "smaller": "Paroles plus petites",
+    "larger": "Paroles plus grandes",
+    "autoScroll": "Défilement automatique",
+    "types": {
+      "wordSynced": "Synchronisées mot à mot",
+      "lineSynced": "Synchronisées ligne par ligne",
+      "plain": "Texte brut"
+    },
+    "offsetValue": "{{offset, number(minimumFractionDigits: 1; maximumFractionDigits: 1; signDisplay: exceptZero)}} s"
+  },
+  "logs": {
+    "title": "Logs",
+    "searchPlaceholder": "Rechercher dans les logs...",
+    "searchAriaLabel": "Rechercher dans les logs",
+    "levelLabel": "Niveau:",
+    "scopeLabel": "Portée:",
+    "clearButton": "Effacer",
+    "exportButton": "Exporter",
+    "openLogFolderButton": "Ouvrir le dossier des logs",
+    "noLogsMessage": "Aucun log à afficher",
+    "invalidRegexMessage": "Expression régulière invalide",
+    "entryCount_one": "{{count}} entrée",
+    "entryCount_many": "{{count}} d'entrées",
+    "entryCount_other": "{{count}} entrées",
+    "exportSuccess": "Logs exportés"
+  },
+  "remote": {
+    "connecting": {
+      "title": "Connexion à Nuclear...",
+      "subtitle": "Vérifiez que Nuclear est lancé et que Nuclear Jam est activé"
+    },
+    "error": {
+      "title": "Impossible de se connecter à Nuclear",
+      "subtitle": "Vérifiez que Nuclear est lancé et que Nuclear Jam est activé dans les paramètres"
+    },
+    "connection": {
+      "connecting": "Connexion en cours",
+      "connected": "Connecté",
+      "reconnecting": "Reconnexion en cours",
+      "failed": "Déconnecté"
+    },
+    "lyrics": {
+      "open": "Afficher les paroles",
+      "back": "Retour"
+    },
+    "queue": {
+      "upNext": "À suivre",
+      "emptyTitle": "La file d'attente est vide",
+      "emptySubtitle": "Ajoutez des morceaux dans Nuclear pour les voir ici"
+    },
+    "search": {
+      "placeholder": "Rechercher de la musique",
+      "emptyTitle": "Aucun résultat",
+      "emptyDescription": "Rien n'a été trouvé pour votre recherche",
+      "errorTitle": "La recherche a échoué",
+      "errorDescription": "Vérifiez la connexion à Nuclear et réessayez"
+    },
+    "qrCode": {
+      "tooltip": "Télécommande Nuclear Jam",
+      "instructions": "Scannez le QR code ou copiez l'adresse ci-dessous pour vous connecter à Nuclear Jam"
+    }
+  },
+  "titleBar": {
+    "title": "Nuclear, lecteur de musique",
+    "minimize": "Réduire",
+    "maximize": "Agrandir",
+    "close": "Fermer"
+  },
+  "changelog": {
+    "title": "Nouveautés",
+    "seeMore_one": "Voir plus ({{count}} version plus ancienne)",
+    "seeMore_many": "Voir plus ({{count}} de versions plus anciennes)",
+    "seeMore_other": "Voir plus ({{count}} versions plus anciennes)",
+    "types": {
+      "feature": "Fonctionnalité",
+      "fix": "Correction",
+      "improvement": "Amélioration",
+      "chore": "Maintenance",
+      "plugin": "Plugin",
+      "docs": "Documentation"
+    }
+  }
+}
